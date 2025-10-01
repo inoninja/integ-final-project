@@ -3,23 +3,25 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>{{ folder }}</ion-title>
+    <ion-title>Developers</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">{{ folder }}</ion-title>
+      <ion-title size="large">Developers</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div class="ion-padding">
-    <ion-list lines="none">
-      <ion-item *ngFor="let entry of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" button>
+    <h2>Our Development Team</h2>
+    <ion-list>
+      <ion-item *ngFor="let dev of developers">
         <ion-label>
-          <h2>Entry {{ entry }}</h2>
-          <p>Information about this entry goes here.</p>
+          <h2>{{ dev.name }}</h2>
+          <p>{{ dev.role }}</p>
+          <p>{{ dev.bio }}</p>
         </ion-label>
       </ion-item>
     </ion-list>
